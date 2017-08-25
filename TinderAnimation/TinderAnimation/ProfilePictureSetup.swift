@@ -17,12 +17,13 @@ class profilePic {
         profileView.translatesAutoresizingMaskIntoConstraints = false
         profileView.layer.borderWidth = 2.0
         profileView.layer.borderColor = UIColor.white.cgColor
-        profileView.layer.backgroundColor = UIColor.gray.cgColor
+        profileView.layer.backgroundColor = UIColor.lightGray.cgColor
         profileView.layer.cornerRadius = 50.0
         profileView.widthAnchor.constraint(equalToConstant: 100).isActive = true
         profileView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         profileView.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor).isActive = true
         profileView.centerYAnchor.constraint(equalTo: view.layoutMarginsGuide.centerYAnchor).isActive = true
+        
     }
 }
 
