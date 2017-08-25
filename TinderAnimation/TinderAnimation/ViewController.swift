@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var animation = TinderAnimate()
     override func viewDidLoad() {
         super.viewDidLoad()
-        animation.setup(view: self.view, colour: UIColor.red)
+        animation.setup(view: self.view)
     }
 }
 

@@ -8,31 +8,32 @@
 
 import Foundation
 import UIKit
-
+import Darwin
 
 class TinderAnimate {
     var superView: UIView?
     
-    func setup(view: UIView, colour: UIColor) {
-        let constant: CGFloat = 150.0
+    func setup(view: UIView) {
+        let constant: CGFloat = 600.0
         let circularAnimation = UIView()
         view.addSubview(circularAnimation)
         self.superView = view
         circularAnimation.tag = 1
         circularAnimation.translatesAutoresizingMaskIntoConstraints = false
         circularAnimation.layer.borderWidth = 2.0
-        circularAnimation.layer.borderColor = colour.cgColor
-        circularAnimation.layer.backgroundColor = UIColor.clear.cgColor
+        circularAnimation.layer.borderColor = UIColor(red: 254/255, green: 63/255, blue: 68/255, alpha: 1.0).cgColor
+        circularAnimation.layer.backgroundColor = UIColor(red: 254/255, green: 130/255, blue: 130/255, alpha: 1.0).cgColor
         circularAnimation.layer.opacity = 1.0
+        circularAnimation.layer.cornerRadius = 0.0
         circularAnimation.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor, constant: 0.0).isActive = true
         circularAnimation.centerYAnchor.constraint(equalTo: view.layoutMarginsGuide.centerYAnchor, constant: 0.0).isActive = true
         
         view.layoutIfNeeded()
-        circularAnimation.widthAnchor.constraint(equalToConstant: constant).isActive = true
-        circularAnimation.heightAnchor.constraint(equalToConstant: constant).isActive = true
-        circularAnimation.layer.cornerRadius = constant/1.8
+        circularAnimation.widthAnchor.constraint(equalToConstant: constant/2).isActive = true
+        circularAnimation.heightAnchor.constraint(equalToConstant: constant/2).isActive = true
+        circularAnimation.layer.cornerRadius = (constant/4)
         
-        UIView.animate(withDuration: 2.0, delay: 0.1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 2.5, delay: 0.1, options: .curveEaseOut, animations: {
             view.layoutIfNeeded()
             circularAnimation.layer.opacity = 0.0
             let animationView = view.viewWithTag(1)
@@ -45,7 +46,7 @@ class TinderAnimate {
     }
     
     func repeatAnimation(views: UIView) {
-        setup(view: views, colour: UIColor.red)
+        setup(view: views)
     }
 }
 
