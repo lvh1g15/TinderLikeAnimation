@@ -26,19 +26,18 @@ class TinderAnimate {
         circularAnimation.layer.cornerRadius = 0.0
         circularAnimation.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor, constant: 0.0).isActive = true
         circularAnimation.centerYAnchor.constraint(equalTo: view.layoutMarginsGuide.centerYAnchor, constant: 0.0).isActive = true
-        constant = 200
+        constant = 100
         circularAnimation.widthAnchor.constraint(equalToConstant: constant/2).isActive = true
         circularAnimation.heightAnchor.constraint(equalToConstant: constant/2).isActive = true
-        circularAnimation.layer.cornerRadius = 50.0
+        circularAnimation.layer.cornerRadius = 25.0
         
         view.layoutIfNeeded()
-        
         
         UIView.animate(withDuration: 2.5, delay: 0.1, options: .curveEaseOut, animations: {
             view.layoutIfNeeded()
             
             circularAnimation.layer.opacity = 0.0
-            circularAnimation.transform = CGAffineTransform(scaleX: 5, y: 5)
+            circularAnimation.transform = CGAffineTransform(scaleX: 7, y: 7)
             circularAnimation.layer.borderWidth = 1.0
             
 
