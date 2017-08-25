@@ -4,7 +4,6 @@
 //
 //  Created by Landon Vago-Hughes on 25/08/2017.
 //  Copyright © 2017 Landon Vago-Hughes. All rights reserved.
-//
 
 import Foundation
 import UIKit
@@ -14,7 +13,7 @@ class TinderAnimate {
     var superView: UIView?
     
     func setup(view: UIView) {
-        let constant: CGFloat = 600.0
+        var constant: CGFloat = 0.0
         let circularAnimation = UIView()
         view.addSubview(circularAnimation)
         self.superView = view
@@ -27,15 +26,22 @@ class TinderAnimate {
         circularAnimation.layer.cornerRadius = 0.0
         circularAnimation.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor, constant: 0.0).isActive = true
         circularAnimation.centerYAnchor.constraint(equalTo: view.layoutMarginsGuide.centerYAnchor, constant: 0.0).isActive = true
-        
-        view.layoutIfNeeded()
+        constant = 200
         circularAnimation.widthAnchor.constraint(equalToConstant: constant/2).isActive = true
         circularAnimation.heightAnchor.constraint(equalToConstant: constant/2).isActive = true
-        circularAnimation.layer.cornerRadius = (constant/4)
+        circularAnimation.layer.cornerRadius = 50.0
+        
+        view.layoutIfNeeded()
+        
         
         UIView.animate(withDuration: 2.5, delay: 0.1, options: .curveEaseOut, animations: {
             view.layoutIfNeeded()
+            
             circularAnimation.layer.opacity = 0.0
+            circularAnimation.transform = CGAffineTransform(scaleX: 5, y: 5)
+            circularAnimation.layer.borderWidth = 1.0
+            
+
             let animationView = view.viewWithTag(1)
             view.willRemoveSubview(animationView!)
         }, completion: { finishedANimation in
