@@ -15,6 +15,7 @@
 		440D59FC1F5064B800536DC7 /* TinderAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D59FB1F5064B800536DC7 /* TinderAnimationTests.swift */; };
 		440D5A071F5064B800536DC7 /* TinderAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D5A061F5064B800536DC7 /* TinderAnimationUITests.swift */; };
 		440D5A161F5064D700536DC7 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D5A151F5064D700536DC7 /* animation.swift */; };
+		449661461F50B37300235290 /* ProfilePictureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449661451F50B37300235290 /* ProfilePictureSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		440D5A061F5064B800536DC7 /* TinderAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderAnimationUITests.swift; sourceTree = "<group>"; };
 		440D5A081F5064B800536DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		440D5A151F5064D700536DC7 /* animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
+		449661451F50B37300235290 /* ProfilePictureSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				440D5A151F5064D700536DC7 /* animation.swift */,
+				449661451F50B37300235290 /* ProfilePictureSetup.swift */,
 			);
 			name = AnimationClass;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				440D59E91F5064B800536DC7 /* ViewController.swift in Sources */,
 				440D5A161F5064D700536DC7 /* animation.swift in Sources */,
+				449661461F50B37300235290 /* ProfilePictureSetup.swift in Sources */,
 				440D59E71F5064B800536DC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +532,7 @@
 				440D5A0D1F5064B800536DC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		440D5A0E1F5064B800536DC7 /* Build configuration list for PBXNativeTarget "TinderAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +541,7 @@
 				440D5A101F5064B800536DC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		440D5A111F5064B800536DC7 /* Build configuration list for PBXNativeTarget "TinderAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +550,7 @@
 				440D5A131F5064B800536DC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

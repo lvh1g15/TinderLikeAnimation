@@ -33,20 +33,15 @@ class TinderAnimate {
         
         view.layoutIfNeeded()
         
-        UIView.animate(withDuration: 2.5, delay: 0.1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 2.5, delay: 0.1, options: .repeat, animations: {
             view.layoutIfNeeded()
             
             circularAnimation.layer.opacity = 0.0
             circularAnimation.transform = CGAffineTransform(scaleX: 7, y: 7)
             circularAnimation.layer.borderWidth = 1.0
-            
 
-            let animationView = view.viewWithTag(1)
-            view.willRemoveSubview(animationView!)
         }, completion: { finishedANimation in
-            if finishedANimation == true {
-                self.repeatAnimation(views: self.superView!)
-            }
+
         })
     }
     

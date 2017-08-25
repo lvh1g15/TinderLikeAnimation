@@ -11,9 +11,11 @@ import UIKit
 class ViewController: UIViewController {
     
     var animation = TinderAnimate()
+    var profilePicture = profilePic()
     override func viewDidLoad() {
         super.viewDidLoad()
         animation.setup(view: self.view)
+        profilePicture.creatingProfileView(view: self.view)
     }
 }
 
