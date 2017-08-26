@@ -16,6 +16,7 @@
 		440D5A071F5064B800536DC7 /* TinderAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D5A061F5064B800536DC7 /* TinderAnimationUITests.swift */; };
 		440D5A161F5064D700536DC7 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D5A151F5064D700536DC7 /* animation.swift */; };
 		449661461F50B37300235290 /* ProfilePictureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449661451F50B37300235290 /* ProfilePictureSetup.swift */; };
+		449661491F51B2B700235290 /* UserTouchEnabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449661481F51B2B700235290 /* UserTouchEnabled.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		440D5A081F5064B800536DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		440D5A151F5064D700536DC7 /* animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
 		449661451F50B37300235290 /* ProfilePictureSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureSetup.swift; sourceTree = "<group>"; };
+		449661481F51B2B700235290 /* UserTouchEnabled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTouchEnabled.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +136,18 @@
 			isa = PBXGroup;
 			children = (
 				440D5A151F5064D700536DC7 /* animation.swift */,
-				449661451F50B37300235290 /* ProfilePictureSetup.swift */,
+				449661471F51B29A00235290 /* ProfilePic */,
 			);
 			name = AnimationClass;
+			sourceTree = "<group>";
+		};
+		449661471F51B29A00235290 /* ProfilePic */ = {
+			isa = PBXGroup;
+			children = (
+				449661451F50B37300235290 /* ProfilePictureSetup.swift */,
+				449661481F51B2B700235290 /* UserTouchEnabled.swift */,
+			);
+			name = ProfilePic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449661491F51B2B700235290 /* UserTouchEnabled.swift in Sources */,
 				440D59E91F5064B800536DC7 /* ViewController.swift in Sources */,
 				440D5A161F5064D700536DC7 /* animation.swift in Sources */,
 				449661461F50B37300235290 /* ProfilePictureSetup.swift in Sources */,

@@ -10,10 +10,16 @@ import Foundation
 import UIKit
 
 class profilePic {
+    
+    struct Returners {
+        var profileView: UIImageView!
+//        var profileButton: UIButton!
+    }
 
-    func creatingProfileView(view: UIView) {
+    func creatingProfileView(view: UIView) -> Returners {
         let profileView = UIImageView()
         view.addSubview(profileView)
+        
         profileView.translatesAutoresizingMaskIntoConstraints = false
         profileView.layer.borderWidth = 2.0
         profileView.layer.borderColor = UIColor.white.cgColor
@@ -23,6 +29,12 @@ class profilePic {
         profileView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         profileView.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor).isActive = true
         profileView.centerYAnchor.constraint(equalTo: view.layoutMarginsGuide.centerYAnchor).isActive = true
+
+        return Returners(profileView: profileView)
+
+    }
+    
+    func animateProfileView(profile: UIImageView) {
         
     }
 }
