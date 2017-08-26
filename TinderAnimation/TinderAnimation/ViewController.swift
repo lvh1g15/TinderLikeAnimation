@@ -28,9 +28,16 @@ class ViewController: UIViewController {
         guard let touch: UITouch = touches.first else { return }
         if touch.view == self.profileView {
             print("touch entered")
-            self.profilePicture.animateProfileView(profile: profileView)
+            animation.profileAnimateTouchBegin(profileView: self.profileView, bool: true)
         }
         super.touchesBegan(touches, with: event)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch: UITouch = touches.first else { return }
+        if touch.view == self.profileView {
+            animation.profileAnimateTouchBegin(profileView: self.profileView, bool: false)
+        }
     }
 }
 

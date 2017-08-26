@@ -19,7 +19,7 @@ class TinderAnimate {
         self.superView = view
         circularAnimation.tag = 1
         circularAnimation.translatesAutoresizingMaskIntoConstraints = false
-        circularAnimation.layer.borderWidth = 2.0
+        circularAnimation.layer.borderWidth = 0.5
         circularAnimation.layer.borderColor = UIColor(red: 254/255, green: 63/255, blue: 68/255, alpha: 1.0).cgColor
         circularAnimation.layer.backgroundColor = UIColor(red: 254/255, green: 130/255, blue: 130/255, alpha: 1.0).cgColor
         circularAnimation.layer.opacity = 1.0
@@ -38,15 +38,23 @@ class TinderAnimate {
             
             circularAnimation.layer.opacity = 0.0
             circularAnimation.transform = CGAffineTransform(scaleX: 7, y: 7)
-            circularAnimation.layer.borderWidth = 1.0
 
         }, completion: { finishedANimation in
 
         })
     }
     
-    func repeatAnimation(views: UIView) {
-        setup(view: views)
+    func profileAnimateTouchBegin(profileView: UIImageView, bool: Bool) {
+        
+        UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveLinear, animations: {
+            if bool == true {
+                profileView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            } else {
+                profileView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
+        }, completion: { finishedANimation in
+            
+        })
     }
 }
 
