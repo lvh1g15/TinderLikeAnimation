@@ -45,16 +45,15 @@ class TinderAnimate {
     }
     
     func profileAnimateTouchBegin(profileView: UIImageView, bool: Bool) {
-        
-        UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveLinear, animations: {
-            if bool == true {
-                profileView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-            } else {
+        if bool == true {
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+                    profileView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }, completion: nil)
+        } else {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 6.0, options: .curveLinear, animations: {
                 profileView.transform = CGAffineTransform(scaleX: 1, y: 1)
-            }
-        }, completion: { finishedANimation in
-            
-        })
+            }, completion: nil)
+        }
     }
 }
 
