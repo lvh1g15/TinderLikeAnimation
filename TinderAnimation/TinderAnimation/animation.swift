@@ -15,7 +15,6 @@ class TinderAnimate {
     func setup(view: UIView, options: UIViewAnimationOptions) {
         var constant: CGFloat = 0.0
         let circularAnimation = UIView()
-//        view.addSubview(circularAnimation)
         view.insertSubview(circularAnimation, at: 1)
         self.superView = view
         circularAnimation.tag = 1
@@ -39,9 +38,7 @@ class TinderAnimate {
             circularAnimation.layer.opacity = 0.0
             circularAnimation.transform = CGAffineTransform(scaleX: 7, y: 7)
 
-        }, completion: { finishedANimation in
-
-        })
+        }, completion: nil)
     }
     
     func profileAnimateTouchBegin(profileView: UIImageView, bool: Bool, view: UIView) {
