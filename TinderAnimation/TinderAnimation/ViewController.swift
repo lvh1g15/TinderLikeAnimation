@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var profileClickButton = UIButton()
     var profileView = UIImageView()
@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupRefreshButton()
         animation.setup(view: self.view, options: .repeat)
         let profileClick = profilePicture.creatingProfileView(view: self.view)
         self.profileView = profileClick.profileView

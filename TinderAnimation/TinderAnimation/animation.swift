@@ -49,7 +49,7 @@ class TinderAnimate {
             setup(view: view, options: .curveEaseOut)
             
         } else {
-            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 6.0, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 6.0, options: .curveLinear, animations: {
                 profileView.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
         }
