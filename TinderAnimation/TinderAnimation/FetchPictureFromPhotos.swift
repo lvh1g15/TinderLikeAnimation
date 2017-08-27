@@ -13,12 +13,10 @@ import Kingfisher
 extension ViewController {
         
     func imageSetup(_ sender: UIButton) {
-        self.profileView.image = nil
         guard let urls = URL(string: "https://source.unsplash.com/random/\(Int(self.profileView.layer.frame.height))x\(Int(self.profileView.layer.frame.width))") else { return }
-        let resource = ImageResource(downloadURL: urls, cacheKey: urls.absoluteString)
+        let resource = ImageResource(downloadURL: urls)
         self.profileView.kf.setImage(with: resource)
         self.profileView.clipsToBounds = true
-        
     }
     
     func setupRefreshButton() {
