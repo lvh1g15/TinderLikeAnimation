@@ -13,7 +13,6 @@ class profilePic {
     
     struct Returners {
         var profileView: UIImageView!
-//        var profileButton: UIButton!
     }
 
     func creatingProfileView(view: UIView) -> Returners {
@@ -32,10 +31,6 @@ class profilePic {
 
         return Returners(profileView: profileView)
 
-    }
-    
-    func animateProfileView(profile: UIImageView) {
-        
     }
 }
 

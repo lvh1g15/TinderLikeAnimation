@@ -15,4 +15,10 @@ class UserTouchEnabled {
             i.isUserInteractionEnabled = true
         }
     }
+    func removeView(superView: UIView) {
+        let subviews = superView.subviews
+        for i in subviews {
+            superView.willRemoveSubview(i)
+        }
+    }
 }

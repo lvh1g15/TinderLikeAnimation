@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animation.setup(view: self.view)
+        animation.setup(view: self.view, options: .repeat)
         let profileClick = profilePicture.creatingProfileView(view: self.view)
         self.profileView = profileClick.profileView
         self.profileView.isUserInteractionEnabled = true
@@ -27,8 +27,7 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch: UITouch = touches.first else { return }
         if touch.view == self.profileView {
-            print("touch entered")
-            animation.profileAnimateTouchBegin(profileView: self.profileView, bool: true)
+            animation.profileAnimateTouchBegin(profileView: self.profileView, bool: true, view: self.view)
         }
         super.touchesBegan(touches, with: event)
     }
@@ -36,7 +35,7 @@ class ViewController: UIViewController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch: UITouch = touches.first else { return }
         if touch.view == self.profileView {
-            animation.profileAnimateTouchBegin(profileView: self.profileView, bool: false)
+            animation.profileAnimateTouchBegin(profileView: self.profileView, bool: false, view: self.view)
         }
     }
 }
