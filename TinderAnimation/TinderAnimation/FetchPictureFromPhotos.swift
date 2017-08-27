@@ -13,6 +13,7 @@ import Kingfisher
 extension ViewController {
         
     func imageSetup(_ sender: UIButton) {
+        self.profileView.kf.base.image = nil
         guard let urls = URL(string: "https://source.unsplash.com/random/\(Int(self.profileView.layer.frame.height))x\(Int(self.profileView.layer.frame.width))") else { return }
         let resource = ImageResource(downloadURL: urls)
         self.profileView.kf.setImage(with: resource)
@@ -29,14 +30,6 @@ extension ViewController {
         refreshed.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor).isActive = true
         refreshed.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 50).isActive = true
         refreshed.addTarget(self, action: #selector(imageSetup(_:)), for: .touchUpInside)
-    }
-    
-    func image(image:UIImage,imageSize:CGSize)->UIImage {
-        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0.0)
-        image.drawAsPattern(in: CGRect(x: self.profileView.center.x, y: self.profileView.center.y, width: self.profileView.layer.frame.width, height: self.profileView.layer.frame.height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext()
-        return newImage!;
     }
 }
 

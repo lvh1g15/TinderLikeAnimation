@@ -37,8 +37,13 @@ class TinderAnimate {
             
             circularAnimation.layer.opacity = 0.0
             circularAnimation.transform = CGAffineTransform(scaleX: 7, y: 7)
+            
+        }, completion: { stop in
+            if options == .curveEaseOut {
+                circularAnimation.removeFromSuperview()
+            }
+        })
 
-        }, completion: nil)
     }
     
     func profileAnimateTouchBegin(profileView: UIImageView, bool: Bool, view: UIView) {
